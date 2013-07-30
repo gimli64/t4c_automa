@@ -1,10 +1,10 @@
 from automa.api import *
 
-connect = Image('connect.jpg')
-news = Image('news.jpg')
-enter_realms = Image('enter_realms.jpg')
-enter = Image('enter.jpg')
-compas = Image('compas.jpg')
+connect = Image('images\\connect.jpg')
+news = Image('images\\news.jpg')
+enter_realms = Image('images\\enter_realms.jpg')
+enter = Image('images\\enter.jpg')
+compas = Image('images\\compas.jpg')
 
 start(r"C:\Program Files (x86)\The4ThComing\t4c.exe")
 
