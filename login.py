@@ -1,21 +1,16 @@
 from automa.api import *
+from local_conf import PATH_TO_T4C
 
-connect = Image('images\\connect.jpg')
-news = Image('images\\news.jpg')
-enter_realms = Image('images\\enter_realms.jpg')
-enter = Image('images\\enter.jpg')
-compas = Image('images\\compas.jpg')
+start(PATH_TO_T4C)
 
-start(r"C:\Program Files (x86)\The4ThComing\t4c.exe")
-
-wait_until(connect.exists, timeout_secs=10)
+wait_until(Image(r"images\connect.jpg").exists, timeout_secs=10)
 press(ENTER)
 
-wait_until(news.exists, timeout_secs=100)
+wait_until(Image(r"images\news.jpg").exists, timeout_secs=100)
 press(ENTER)
 
-wait_until(enter_realms.exists, timeout_secs=10)
+wait_until(Image(r"images\enter_realms.jpg").exists, timeout_secs=10)
 press(ENTER)
 
-wait_until(enter.exists, timeout_secs=10)
+wait_until(Image(r"images\enter.jpg").exists, timeout_secs=10)
 press(ENTER)
