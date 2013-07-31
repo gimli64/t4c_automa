@@ -17,7 +17,9 @@ class Manager:
 		self.dataBitMap = CreateBitmap()
 		self.dataBitMap.CreateCompatibleBitmap(self.DC, self.width, self.height)
 		self.compatibleDC.SelectObject(self.dataBitMap)
-		self.bmpfilenamename = "scrennshot.bmp"
+
+		self.bmpCounter = 0
+		self.bmpFileName = "screenshot{0}.bmp".format(self.bmpCounter)
 
 	def autoLogin(self):
 		switch_to(self.window)
@@ -37,4 +39,7 @@ class Manager:
 	def takeScreenshot(self):
 		switch_to(self.window)
 		self.compatibleDC.BitBlt((0,0), (self.width, self.height) , self.DC, (0,0), SRCCOPY)
-		self.dataBitMap.SaveBitmapFile(self.compatibleDC, self.bmpfilenamename)
+		self.dataBitMap.SaveBitmapFile(self.compatibleDC, self.bmpFileName)
+
+		self.bmpCounter += 1
+		self.bmpFileName = "screenshot{0}.bmp".format(self.bmpCounter)
