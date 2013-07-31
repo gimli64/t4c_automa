@@ -13,3 +13,6 @@ http://docs.activestate.com/activepython/2.5/pywin32/win32ui.html
 
 Best thread so far on screenshot with pywin32 :
 http://stackoverflow.com/questions/3586046/fastest-way-to-take-a-screenshot-with-python-on-windows
+
+Tkinter documentation (for our simple python gui):
+http://www.tutorialspoint.com/python/python_gui_programming.htm
